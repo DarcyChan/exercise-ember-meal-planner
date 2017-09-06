@@ -4,14 +4,7 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-    let app = new EmberApp(defaults, {
-        SRI: {
-            crossorigin: 'anonymous'
-        },
-        fingerprint: {
-            prepend: 'https://subdomain.cloudfront.net/'
-        }
-    });
+    let app = new EmberApp(defaults, {});
 
     // Use `app.import` to add additional libraries to the generated
     // output files.
