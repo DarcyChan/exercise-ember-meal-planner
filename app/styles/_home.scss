@@ -1,0 +1,14 @@
+.home-placeholder {
+    padding: $grid-gutter-width;
+    text-align: center;
+    opacity: 0.25;
+    font-size: 1.4em;
+    font-weight: 700;
+
+    @media (min-width: $md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - #{$grid-gutter-width * 2});
+    }
+}

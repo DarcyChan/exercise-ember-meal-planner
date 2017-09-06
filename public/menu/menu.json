@@ -1,0 +1,17 @@
+[
+    {
+        "id": "burger",
+        "name": "Burger",
+        "unsplashId": "vOdK_eih7B0"
+    },
+    {
+        "id": "steak",
+        "name": "Steak",
+        "unsplashId": "auIbTAcSH6E"
+    },
+    {
+        "id": "soup",
+        "name": "Soup",
+        "unsplashId": "w6ftFbPCs9I"
+    }
+]

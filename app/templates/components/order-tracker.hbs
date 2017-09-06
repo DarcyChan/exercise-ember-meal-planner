@@ -1,0 +1,49 @@
+<h1 class="brand">Weekly Meal Planner</h1>
+
+<button class="order-days-toggle" {{action 'toggleActive'}} type="button">
+    Select a day
+</button>
+
+<div class="order-days {{if orderManager.menuIsOpen 'order-days--active' ''}}">
+    {{#each-in orderManager.menuSelection as |day menuOrder|}}
+        <div {{action 'setDayTo' day}} class="order-day {{if menuOrder.isSelected 'order-day--active' ''}}">
+            {{#link-to 'menu'}}
+                <div class="order-day-label">{{day}}</div>
+                <dl class="order-list">
+                    <dt class="order-list-label">Breakfast:</dt>
+                    <dd class="order-list-value">
+                        {{#if menuOrder.breakfast}}
+                            {{#each menuOrder.breakfast as |item|}}
+                                {{order-tracker-item day=day label=item category='breakfast'}}
+                            {{/each}}
+                        {{else}}
+                            <em class="reduced-em">No meal selected</em>
+                        {{/if}}
+                    </dd>
+                    <dt class="order-list-label">Lunch:</dt>
+                    <dd class="order-list-value">
+                        {{#if menuOrder.lunch}}
+                            {{#each menuOrder.lunch as |item|}}
+                                {{order-tracker-item day=day label=item category='lunch'}}
+                            {{/each}}
+                        {{else}}
+                            <em class="reduced-em">No meal selected</em>
+                        {{/if}}
+                    </dd>
+                    <dt class="order-list-label">Dinner:</dt>
+                    <dd class="order-list-value">
+                        {{#if menuOrder.dinner}}
+                            {{#each menuOrder.dinner as |item|}}
+                                {{order-tracker-item day=day label=item category='dinner'}}
+                            {{/each}}
+                        {{else}}
+                            <em class="reduced-em">No meal selected</em>
+                        {{/if}}
+                    </dd>
+                </dl>
+            {{/link-to}}
+        </div>
+    {{/each-in}}
+</div>
+
+{{yield}}

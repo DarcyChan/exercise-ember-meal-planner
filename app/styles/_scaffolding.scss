@@ -1,0 +1,39 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $body-bg;
+    color: $body-color;
+}
+
+@media (min-width: $md) {
+    .page-content {
+        margin-left: $order-tracker-width;
+        padding: $grid-gutter-width;
+    }
+}
+
+.brand {
+    margin: 0;
+    padding: $grid-gutter-width 0;
+    font-size: 2em;
+    line-height: 0.95;
+    text-transform: uppercase;
+    word-spacing: 100vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: $md - 1) {
+    .disable-scroll {
+        overflow: hidden;
+    }
+}

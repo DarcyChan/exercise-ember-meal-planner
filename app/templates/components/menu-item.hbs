@@ -1,0 +1,18 @@
+<img class="menu-item-image" src="https://source.unsplash.com/{{item.unsplashId}}/500x500" alt= {{item.name}} />
+
+<div class="menu-item-content">
+    <div class="menu-item-info">
+        <h3 class="menu-item-title">
+            {{#link-to 'item' item.name}}
+                {{item.name}}
+                <small>More info</small>
+            {{/link-to}}
+        </h3>
+        <div class="menu-item-categories">
+            {{menu-item-button name=item.name mealCategory='breakfast' label="Breakfast"}} {{menu-item-button name=item.name mealCategory='lunch' label="Lunch"}}
+            {{menu-item-button name=item.name mealCategory='dinner' label="Dinner"}}
+        </div>
+    </div>
+</div>
+
+{{yield}}

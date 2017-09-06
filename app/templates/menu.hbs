@@ -1,0 +1,9 @@
+{{menu-header}}
+
+<ul class="menu-items-container">
+    {{#each model as |item|}}
+        {{menu-item item=item}}
+    {{/each}}
+</ul>
+
+{{outlet}}

@@ -1,0 +1,17 @@
+html {
+    font-size: $font-size-base;
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+a {
+    color: $body-color;
+}
+
+.reduced-em {
+    opacity: 0.2;
+}

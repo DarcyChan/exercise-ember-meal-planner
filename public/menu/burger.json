@@ -1,0 +1,9 @@
+{
+    "id": "burger",
+    "name": "Burger",
+    "unsplashId": "vOdK_eih7B0",
+    "calories": 420,
+    "rating": 4.1,
+    "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus sodales efficitur. Vestibulum mollis dolor ac ex lacinia vulputate. Donec facilisis fringilla lobortis."
+}
